@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>payroll</title>
+</head>
+<style>
+   
+
+    h1 {
+        top: 30px;
+        position: absolute;
+        left: 35%;
+    }
+
+    table {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        font-size: 20px;
+        width: 50%;
+        height: 40%;
+        box-shadow: inset;
+        box-shadow: 10px 5px;
+     
+    }
+    form {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        font-size: 30px;
+        width: 50%;
+        height: 100%;
+    
+    }
+
+    
+
+    .container {
+        position: absolute;
+        height: 900px;
+        width: 100%;
+        opacity: 1;
+        border-radius: 50px;
+        box-shadow: 5px 10px rgb(85, 81, 68);
+        background-color: black;
+        color: white;
+        background-size: ;
+        
+    }
+    img {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  }
+  h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    left: 19%;
+    color: green;
+  }
+   th{
+    color: brown;
+   } 
+</style>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.jpeg" alt="">
+        </div>
+        <h1>NET PAY CALCULATOR <br></h1>
+        <p id="Invalid"></p>
+        <p id="succes"></p>
+        <hr>
+        <form id="anchor" action="">
+            <label for="bscs" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Basic Salary:</label>
+            <input id="basic_salary" style="height: 20px;font-size: 10px;" class="bsc" type="number" placeholder="ksh"
+                id="basic_salary" name="Basic Salary">
+            <label for="bnft">Benefit:</label>
+            <input id="benefit" style="height: 20px; font-size: 10px; " type="number" placeholder="ksh"
+                name="Bft">
+            <input type="button"
+                style="height: 30px ;cursor: pointer;width: 100px ;font-size: 16px; background-color: rgb(14, 156, 26); color:rgb(12, 3, 3); font-weight: bolder;border-radius: 20px;"
+                id="btn" value="calc" onclick="new_gross(), new_nhif(), new_nssf(), new_nhdf(), new_taxI(), new_payee()
+                new_net_pay(), get_input()" >
+                
+        </form>
+        
+        <table id="table" border="1">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>results</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="">
+                    <td>Gross salary</td>
+                    <td id="gross"></td>
+                <tr id="">
+                    <td>NSSF</td>
+                    <td id="nssf"></td>
+                </tr><br><br>
+                <tr id="">
+                    <td>NHDF</td>
+                    <td id="nhdf"></td>
+                </tr><br><br>
+                <tr id="">
+                    <td>TAXABLE INCOME</td>
+                    <td id="taxable_income"></td>
+                    <div id="total_nssf_nhdf"></div>
+                </tr><br><br>
+                <tr id="">
+                    <td>NHIF</td>
+                    <td id="nhif"></td>
+                </tr><br><br>
+                <tr id="">
+                    <td>PAYEE</td>
+                    <td id="payee"></td>
+                </tr><br><br>
+                <tr id="">
+                    <td>NET PAY</td>
+                    <td id="net_pay"></td>
+                </tr>
+                </form>
+            </tbody>
+        </table>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
